@@ -13,6 +13,9 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body x-data="{ scrolled: false }" @scroll.window="scrolled = (window.scrollY > 50)">
 
@@ -28,10 +31,8 @@
             </nav>
             <div x-data="{ open: false }" class="md:hidden">
                 <button @click="open = !open" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        <path x-show="open" x-cloak stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
+                    <i class="fas fa-bars text-xl" x-show="!open"></i>
+                    <i class="fas fa-times text-xl" x-show="open" x-cloak></i>
                 </button>
                 <div x-show="open" x-cloak @click.away="open = false" class="absolute top-20 right-6 bg-black/90 backdrop-blur-md rounded-lg shadow-xl p-6 space-y-4">
                     <a href="#problem" @click="open = false" class="block nav-link text-gray-300 hover:text-white">The Problem</a>
@@ -47,12 +48,15 @@
         <!-- Hero Section -->
         <section class="hero-bg min-h-screen flex items-center justify-center text-center pt-20">
             <div class="container mx-auto px-6">
-                <h1 class="text-5xl md:text-7xl font-display font-bold text-white leading-tight mb-4 animate-fade-in">Keep Your Branded Content On Point.</h1>
+                <h1 class="text-5xl md:text-7xl font-display font-bold text-white leading-tight mb-6 animate-fade-in">Make sure your branding ages&nbsp;well.</h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-3 animate-fade-in">
+                    For elite brand agencies, managing AI content is a reputational&nbsp;minefield.
+                </p>
                 <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 animate-fade-in">
-                    For elite brand agencies, managing AI content is a reputational minefield. BrandyDocs is the brand voice regulator that centralizes, tracks, and aligns every AI prompt, ensuring every piece of content is perfectly on-brand—so you can protect your most valuable asset: your reputation.
+                    <span class="gradient-text font-semibold">BrandyDocs is the brand voice regulator</span> that centralizes, tracks, and aligns every AI prompt, ensuring every piece of content is perfectly on-brand—so you not only strengthen your <em>client's</em> brand, but more so, you protect <em>your</em>&nbsp;brand.
                 </p>
                 <a href="https://calendly.com/brandydocs" target="_blank" rel="noopener" class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-4 px-10 text-lg rounded-full inline-block hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in">
-                    Book a Demo - Stop the Chaos
+                    Taste the Magic. Book a Demo &rarr;
                 </a>
             </div>
         </section>
@@ -89,9 +93,7 @@
                 </div>
                 <div class="md:w-1/2 text-left">
                     <div class="flex items-center gap-4 mb-6">
-                        <svg class="w-10 h-10 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 14.5M14.25 3.104c.251.023.501.05.75.082M19.8 14.5l-5.069 5.069A2.25 2.25 0 0113.5 21.75H9.75M19.8 14.5a2.25 2.25 0 002.2-2.25V10.5a2.25 2.25 0 00-2.2-2.25H6.54" />
-                        </svg>
+                        <i class="fas fa-sliders-h text-4xl text-gray-600"></i>
                         <h2 class="text-4xl md:text-5xl font-display font-bold text-white">From Chaos to Control. Instantly.</h2>
                     </div>
                     <p class="text-gray-300 text-lg mb-4">BrandyDocs isn't another content generator. It's your content <span class="gradient-text font-semibold">regulator</span>. We're the experienced guide that steps into the beautiful disaster and provides the one thing you're missing: a single source of truth.</p>
@@ -110,19 +112,19 @@
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Feature Card 1 -->
                     <div class="bg-dark-700/50 backdrop-blur-sm border border-gray-700/50 p-8 rounded-lg hover:border-gold-400 hover:-translate-y-2 transition-all duration-300">
-                        <div class="text-5xl gradient-text mb-4">✓</div>
+                        <i class="fas fa-check-circle text-5xl gradient-text mb-4 block"></i>
                         <h3 class="text-2xl font-display font-bold text-white mb-3">Centralized Truth</h3>
                         <p class="text-gray-400">One place for every brand's prompts. Add, update, and retrieve with ease. No more folder-diving or version-control nightmares.</p>
                     </div>
                     <!-- Feature Card 2 -->
                     <div class="bg-dark-700/50 backdrop-blur-sm border border-gray-700/50 p-8 rounded-lg hover:border-gold-400 hover:-translate-y-2 transition-all duration-300">
-                         <div class="text-5xl gradient-text mb-4">✓</div>
+                         <i class="fas fa-check-circle text-5xl gradient-text mb-4 block"></i>
                         <h3 class="text-2xl font-display font-bold text-white mb-3">Effortless Alignment</h3>
                         <p class="text-gray-400">Track changes, team activity, and results for each prompt. Spot misalignments and take immediate, one-click action.</p>
                     </div>
                     <!-- Feature Card 3 -->
                     <div class="bg-dark-700/50 backdrop-blur-sm border border-gray-700/50 p-8 rounded-lg hover:border-gold-400 hover:-translate-y-2 transition-all duration-300">
-                         <div class="text-5xl gradient-text mb-4">✓</div>
+                         <i class="fas fa-check-circle text-5xl gradient-text mb-4 block"></i>
                         <h3 class="text-2xl font-display font-bold text-white mb-3">Reputation Shield</h3>
                         <p class="text-gray-400">Prevent rogue content before it happens. Ensure every team member, from intern to senior strategist, generates perfectly on-brand content.</p>
                     </div>
@@ -134,9 +136,7 @@
         <section id="testimonials" class="py-20 md:py-32">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                     <svg class="w-12 h-12 text-gray-600 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c.016.322.077.635.202.926.357.831 1.162 1.414 2.098 1.414h8.5c.936 0 1.74-.583 2.098-1.414.125-.291.186-.604.202-.926L21 12.75V9a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9v3.75z" />
-                    </svg>
+                     <i class="fas fa-quote-left text-5xl text-gray-600 mx-auto mb-4 block"></i>
                     <h2 class="text-4xl md:text-5xl font-display font-bold text-white">The Word in the Inner Circle</h2>
                 </div>
                 <div class="grid md:grid-cols-2 gap-8">
@@ -161,8 +161,8 @@
         <!-- CTA Section -->
         <section id="cta" class="py-20 md:py-32 bg-dark-800">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-4">Your Reputation is Not a Line Item.</h2>
-                <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Inaction is the biggest risk. While you're wrestling with spreadsheets, other agencies are building unbreakable brands. Don't let your legacy be defined by a series of small, avoidable mistakes.</p>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">Reputation is on the line.</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">While you're wrestling with spreadsheets, other agencies are building unbreakable brands. Don't let your legacy be defined by a series of small, avoidable mistakes.</p>
                 <a href="https://calendly.com/brandydocs" target="_blank" rel="noopener" class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-4 px-10 text-lg rounded-full inline-block hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     Book a Demo & Secure Your Brand
                 </a>

@@ -9,7 +9,8 @@ export default {
     extend: {
       fontFamily: {
         'display': ['Playfair Display', 'serif'],
-        'body': ['Inter', 'sans-serif'],
+        'body': ['Source Sans 3', 'sans-serif'],
+        'sans': ['Source Sans 3', 'sans-serif'],
       },
       colors: {
         gold: {
