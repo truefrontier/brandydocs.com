@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandyDocs - Keep Your Branded Content On Point</title>
+    <meta name="description" content="AI-powered brand governance for marketing agencies. Centralize, track, and align every AI prompt to ensure perfectly on-brand content.">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body x-data="{ scrolled: false }" @scroll.window="scrolled = (window.scrollY > 50)">
+
+    <!-- Header -->
+    <header :class="{ 'bg-black/80 backdrop-blur-sm shadow-lg': scrolled }" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-display font-bold gradient-text">BrandyDocs</h1>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#problem" class="nav-link text-gray-300 hover:text-white relative transition-colors duration-300">The Problem</a>
+                <a href="#solution" class="nav-link text-gray-300 hover:text-white relative transition-colors duration-300">The Solution</a>
+                <a href="#features" class="nav-link text-gray-300 hover:text-white relative transition-colors duration-300">Features</a>
+                <a href="https://calendly.com/brandydocs" target="_blank" rel="noopener" class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-2 px-6 rounded-full hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">Book a Demo</a>
+            </nav>
+            <div x-data="{ open: false }" class="md:hidden">
+                <button @click="open = !open" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        <path x-show="open" x-cloak stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <div x-show="open" x-cloak @click.away="open = false" class="absolute top-20 right-6 bg-black/90 backdrop-blur-md rounded-lg shadow-xl p-6 space-y-4">
+                    <a href="#problem" @click="open = false" class="block nav-link text-gray-300 hover:text-white">The Problem</a>
+                    <a href="#solution" @click="open = false" class="block nav-link text-gray-300 hover:text-white">The Solution</a>
+                    <a href="#features" @click="open = false" class="block nav-link text-gray-300 hover:text-white">Features</a>
+                    <a href="https://calendly.com/brandydocs" target="_blank" rel="noopener" @click="open = false" class="block bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-2 px-6 rounded-full text-center">Book a Demo</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg min-h-screen flex items-center justify-center text-center pt-20">
+            <div class="container mx-auto px-6">
+                <h1 class="text-5xl md:text-7xl font-display font-bold text-white leading-tight mb-4 animate-fade-in">Keep Your Branded Content On Point.</h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 animate-fade-in">
+                    For elite brand agencies, managing AI content is a reputational minefield. BrandyDocs is the brand voice regulator that centralizes, tracks, and aligns every AI prompt, ensuring every piece of content is perfectly on-brand—so you can protect your most valuable asset: your reputation.
+                </p>
+                <a href="https://calendly.com/brandydocs" target="_blank" rel="noopener" class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-4 px-10 text-lg rounded-full inline-block hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in">
+                    Book a Demo - Stop the Chaos
+                </a>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section id="problem" class="py-20 md:py-32 bg-dark-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">Drowning in the AI Content Deluge</h2>
+                <p class="text-gray-400 text-lg max-w-3xl mx-auto mb-12">
+                    The AI revolution has unleashed an unstoppable torrent of content creation. Your team generates thousands of pieces daily—blog posts, social updates, ad copy, emails—faster than ever before. But this productivity miracle has become a brand nightmare. Without centralized governance, each AI prompt becomes a potential reputation landmine, and you're watching your carefully crafted brand voice get diluted in the endless flood of generated content.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div class="p-6 border border-gray-700 rounded-lg bg-dark-700/50 backdrop-blur-sm hover:border-gold-400 hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-2xl font-display font-bold gradient-text mb-3">Volume Overwhelm</h3>
+                        <p class="text-gray-400">Your team cranks out 500+ AI-generated pieces per week across dozens of clients. Each prompt variation creates exponential brand risk. You're scaling content faster than you can control it.</p>
+                    </div>
+                    <div class="p-6 border border-gray-700 rounded-lg bg-dark-700/50 backdrop-blur-sm hover:border-gold-400 hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-2xl font-display font-bold gradient-text mb-3">Quality Erosion</h3>
+                        <p class="text-gray-400">In the rush to keep up with AI's pace, brand standards slip. What started as slight tonal shifts becomes a completely unrecognizable voice. Clients notice—and they're not happy.</p>
+                    </div>
+                    <div class="p-6 border border-gray-700 rounded-lg bg-dark-700/50 backdrop-blur-sm hover:border-gold-400 hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-2xl font-display font-bold gradient-text mb-3">Scale Without Control</h3>
+                        <p class="text-gray-400">The more content you generate, the higher the stakes. A single off-brand piece in the flood can go viral for all the wrong reasons, destroying years of careful brand building in minutes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section id="solution" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41fa2247?q=80&w=1964&auto=format&fit=crop" alt="Elegant, dark, minimalist interior representing organized control" class="rounded-lg shadow-2xl" loading="lazy">
+                </div>
+                <div class="md:w-1/2 text-left">
+                    <div class="flex items-center gap-4 mb-6">
+                        <svg class="w-10 h-10 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 14.5M14.25 3.104c.251.023.501.05.75.082M19.8 14.5l-5.069 5.069A2.25 2.25 0 0113.5 21.75H9.75M19.8 14.5a2.25 2.25 0 002.2-2.25V10.5a2.25 2.25 0 00-2.2-2.25H6.54" />
+                        </svg>
+                        <h2 class="text-4xl md:text-5xl font-display font-bold text-white">From Chaos to Control. Instantly.</h2>
+                    </div>
+                    <p class="text-gray-300 text-lg mb-4">BrandyDocs isn't another content generator. It's your content <span class="gradient-text font-semibold">regulator</span>. We're the experienced guide that steps into the beautiful disaster and provides the one thing you're missing: a single source of truth.</p>
+                    <p class="text-gray-300 text-lg mb-6">We transform your scattered prompts into a centralized, intelligent system, making brand alignment effortless. You're the hero; we're just the secret weapon that ensures your content always hits the mark.</p>
+                    <a href="https://calendly.com/brandydocs" target="_blank" rel="noopener" class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-3 px-8 rounded-full inline-block hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Book a Demo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 md:py-32 bg-dark-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-12">The Agency's Command Center</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature Card 1 -->
+                    <div class="bg-dark-700/50 backdrop-blur-sm border border-gray-700/50 p-8 rounded-lg hover:border-gold-400 hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-5xl gradient-text mb-4">✓</div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-3">Centralized Truth</h3>
+                        <p class="text-gray-400">One place for every brand's prompts. Add, update, and retrieve with ease. No more folder-diving or version-control nightmares.</p>
+                    </div>
+                    <!-- Feature Card 2 -->
+                    <div class="bg-dark-700/50 backdrop-blur-sm border border-gray-700/50 p-8 rounded-lg hover:border-gold-400 hover:-translate-y-2 transition-all duration-300">
+                         <div class="text-5xl gradient-text mb-4">✓</div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-3">Effortless Alignment</h3>
+                        <p class="text-gray-400">Track changes, team activity, and results for each prompt. Spot misalignments and take immediate, one-click action.</p>
+                    </div>
+                    <!-- Feature Card 3 -->
+                    <div class="bg-dark-700/50 backdrop-blur-sm border border-gray-700/50 p-8 rounded-lg hover:border-gold-400 hover:-translate-y-2 transition-all duration-300">
+                         <div class="text-5xl gradient-text mb-4">✓</div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-3">Reputation Shield</h3>
+                        <p class="text-gray-400">Prevent rogue content before it happens. Ensure every team member, from intern to senior strategist, generates perfectly on-brand content.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials -->
+        <section id="testimonials" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                     <svg class="w-12 h-12 text-gray-600 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c.016.322.077.635.202.926.357.831 1.162 1.414 2.098 1.414h8.5c.936 0 1.74-.583 2.098-1.414.125-.291.186-.604.202-.926L21 12.75V9a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9v3.75z" />
+                    </svg>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-white">The Word in the Inner Circle</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-dark-700/50 border-l-4 border-gold-500 p-8 rounded-lg">
+                        <p class="text-xl text-gray-300 italic mb-6">"BrandyDocs didn't just organize our prompts; it saved us from ourselves. We cut down our content review time by 70% because everything is right the first time."</p>
+                        <div>
+                            <p class="font-bold text-white">Helena Shaw</p>
+                            <p class="text-sm gradient-text">Founder, Apex Branding Co.</p>
+                        </div>
+                    </div>
+                    <div class="bg-dark-700/50 border-l-4 border-gold-500 p-8 rounded-lg">
+                        <p class="text-xl text-gray-300 italic mb-6">"Onboarding a new writer used to take a week of shadowing. Now, we just give them access to BrandyDocs. They're producing on-brand content on day one. It's our competitive edge."</p>
+                        <div>
+                            <p class="font-bold text-white">Marcus Thorne</p>
+                            <p class="text-sm gradient-text">Creative Director, Sterling Strategies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="py-20 md:py-32 bg-dark-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-4">Your Reputation is Not a Line Item.</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Inaction is the biggest risk. While you're wrestling with spreadsheets, other agencies are building unbreakable brands. Don't let your legacy be defined by a series of small, avoidable mistakes.</p>
+                <a href="https://calendly.com/brandydocs" target="_blank" rel="noopener" class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-4 px-10 text-lg rounded-full inline-block hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    Book a Demo & Secure Your Brand
+                </a>
+                <p class="text-gray-500 mt-4 text-sm">Be among the first to gain control.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 BrandyDocs. All Rights Reserved. For the discerning agency.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
