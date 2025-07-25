@@ -16,6 +16,9 @@
     
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body x-data="{ scrolled: false }" @scroll.window="scrolled = (window.scrollY > 50)">
 
@@ -68,20 +71,20 @@
         <!-- Problem Section -->
         <section id="problem" class="py-20 md:py-32 bg-dark-800">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">Only <em>You</em> Can Prevent AI Slop</h2>
-                <p class="text-gray-400 text-lg max-w-3xl mx-auto mb-12">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6" data-aos="fade-up">Only <em>You</em> Can Prevent AI Slop</h2>
+                <p class="text-gray-400 text-lg max-w-3xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="200">
                     The AI revolution has unleashed an unstoppable torrent of content creation. Your team generates thousands of pieces daily—blog posts, social updates, ad copy, emails—faster than ever before. But this productivity miracle has become a brand nightmare. Without constant vigilance, each AI prompt becomes a potential reputation landmine, and you're watching your carefully crafted brand voice get diluted in the endless flood of generated content.
                 </p>
                 <div class="grid md:grid-cols-3 gap-8 text-left">
-                    <div class="p-6 border border-gray-700 rounded-lg bg-dark-700/50 backdrop-blur-sm hover:border-gold-400 hover:-translate-y-1 transition-all duration-300">
+                    <div class="p-6 border border-gray-700 rounded-lg bg-dark-700/50 backdrop-blur-sm hover:border-gold-400 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
                         <h3 class="text-2xl font-display font-bold gradient-text mb-3">Volume Overwhelm</h3>
                         <p class="text-gray-400">Your team cranks out 500+ AI-generated pieces per week across dozens of clients. Each prompt variation creates exponential brand risk. You're scaling content faster than you can control it.</p>
                     </div>
-                    <div class="p-6 border border-gray-700 rounded-lg bg-dark-700/50 backdrop-blur-sm hover:border-gold-400 hover:-translate-y-1 transition-all duration-300">
+                    <div class="p-6 border border-gray-700 rounded-lg bg-dark-700/50 backdrop-blur-sm hover:border-gold-400 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
                         <h3 class="text-2xl font-display font-bold gradient-text mb-3">Quality Erosion</h3>
                         <p class="text-gray-400">In the rush to keep up with AI's pace, brand standards slip. What started as slight tonal shifts becomes a completely unrecognizable voice. Clients notice—and they're not happy.</p>
                     </div>
-                    <div class="p-6 border border-gray-700 rounded-lg bg-dark-700/50 backdrop-blur-sm hover:border-gold-400 hover:-translate-y-1 transition-all duration-300">
+                    <div class="p-6 border border-gray-700 rounded-lg bg-dark-700/50 backdrop-blur-sm hover:border-gold-400 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
                         <h3 class="text-2xl font-display font-bold gradient-text mb-3">Scale Without Control</h3>
                         <p class="text-gray-400">The more content you generate, the higher the stakes. A single off-brand piece in the flood can go viral for all the wrong reasons, destroying years of careful brand building in minutes.</p>
                     </div>
@@ -96,27 +99,27 @@
                     <img src="https://images.unsplash.com/photo-1618221195710-dd6b41fa2247?q=80&w=1964&auto=format&fit=crop" alt="Elegant, dark, minimalist interior representing organized control" class="rounded-lg shadow-2xl" loading="lazy">
                 </div> -->
                 <div class="text-center mx-auto">
-                    <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-4 mb-6" data-aos="fade-up">
                         <i class="fas fa-sliders-h text-4xl text-gray-600"></i>
                         <h2 class="text-4xl md:text-5xl font-display font-bold text-white">From Chaos to Control. Instantly.</h2>
                     </div>
                     <div class="mx-auto max-w-xl">
-                        <h3 class="text-2xl font-display font-bold text-white mb-6">How to Flow with BrandyDocs</h3>
+                        <h3 class="text-2xl font-display font-bold text-white mb-6" data-aos="fade-up" data-aos-delay="200">How to Flow with BrandyDocs</h3>
                         <div class="space-y-4 text-left max-w-lg mx-auto mb-6">
-                            <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-4" data-aos="fade-right" data-aos-delay="300">
                                 <div class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold w-8 h-8 rounded-full flex items-center justify-center text-sm flex-shrink-0">1</div>
                                 <p class="text-gray-300">Upload all your prompts and have them automatically organized. <em>&mdash;&nbsp;Finally, all together in one place!</em></p>
                             </div>
-                            <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-4" data-aos="fade-right" data-aos-delay="400">
                                 <div class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold w-8 h-8 rounded-full flex items-center justify-center text-sm flex-shrink-0">2</div>
                                 <p class="text-gray-300">After you tell us more about your brand(s), we'll turn on auto-detection to highlight any prompts at risk of generating off-brand content. <em>&mdash;&nbsp;Your very own prompt reviewer agent working 24/7!</em></p>
                             </div>
-                            <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-4" data-aos="fade-right" data-aos-delay="500">
                                 <div class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold w-8 h-8 rounded-full flex items-center justify-center text-sm flex-shrink-0">3</div>
                                 <p class="text-gray-300">Add, edit, or copy the perfect, up-to-date, on-brand prompts and paste them into any AI tool. <em>&mdash;&nbsp;Just sit back and sip on your BrandyDocs!</em></p>
                             </div>
                         </div>
-                        <a href="https://calendly.com/brandydocs" target="_blank" rel="noopener" class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-3 px-8 rounded-full inline-block hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        <a href="https://calendly.com/brandydocs" target="_blank" rel="noopener" class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-3 px-8 rounded-full inline-block hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
                             Book a Demo
                         </a>
                     </div>
@@ -127,22 +130,22 @@
         <!-- Features Section -->
         <section id="features" class="py-20 md:py-32 bg-dark-800">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-12">The Agency's Command Center</h2>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-12" data-aos="fade-up">The Agency's Command Center</h2>
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Feature Card 1 -->
-                    <div class="bg-dark-700/50 backdrop-blur-sm border border-gray-700/50 p-8 rounded-lg hover:border-gold-400 hover:-translate-y-2 transition-all duration-300">
+                    <div class="bg-dark-700/50 backdrop-blur-sm border border-gray-700/50 p-8 rounded-lg hover:border-gold-400 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                         <i class="fas fa-check-circle text-5xl gradient-text mb-4 block"></i>
                         <h3 class="text-2xl font-display font-bold text-white mb-3">Centralized Truth</h3>
                         <p class="text-gray-400">One place for every brand's prompts. Add, update, and retrieve with ease. No more folder-diving or version-control nightmares.</p>
                     </div>
                     <!-- Feature Card 2 -->
-                    <div class="bg-dark-700/50 backdrop-blur-sm border border-gray-700/50 p-8 rounded-lg hover:border-gold-400 hover:-translate-y-2 transition-all duration-300">
+                    <div class="bg-dark-700/50 backdrop-blur-sm border border-gray-700/50 p-8 rounded-lg hover:border-gold-400 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
                          <i class="fas fa-check-circle text-5xl gradient-text mb-4 block"></i>
                         <h3 class="text-2xl font-display font-bold text-white mb-3">Effortless Alignment</h3>
                         <p class="text-gray-400">Track changes, team activity, and results for each prompt. Spot misalignments and take immediate, one-click action.</p>
                     </div>
                     <!-- Feature Card 3 -->
-                    <div class="bg-dark-700/50 backdrop-blur-sm border border-gray-700/50 p-8 rounded-lg hover:border-gold-400 hover:-translate-y-2 transition-all duration-300">
+                    <div class="bg-dark-700/50 backdrop-blur-sm border border-gray-700/50 p-8 rounded-lg hover:border-gold-400 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
                          <i class="fas fa-check-circle text-5xl gradient-text mb-4 block"></i>
                         <h3 class="text-2xl font-display font-bold text-white mb-3">Reputation Shield</h3>
                         <p class="text-gray-400">Prevent rogue content before it happens. Ensure every team member, from intern to senior strategist, generates perfectly on-brand content.</p>
@@ -155,18 +158,18 @@
         <section id="testimonials" class="py-20 md:py-32">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                     <i class="fas fa-quote-left text-5xl text-gray-600 mx-auto mb-4 block"></i>
-                    <h2 class="text-4xl md:text-5xl font-display font-bold text-white">The Word in the Inner Circle</h2>
+                     <i class="fas fa-quote-left text-5xl text-gray-600 mx-auto mb-4 block" data-aos="fade-up"></i>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-white" data-aos="fade-up" data-aos-delay="200">The Word in the Inner Circle</h2>
                 </div>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-dark-700/50 border-l-4 border-gold-500 p-8 rounded-lg">
+                    <div class="bg-dark-700/50 border-l-4 border-gold-500 p-8 rounded-lg" data-aos="fade-right" data-aos-delay="300">
                         <p class="text-xl text-gray-300 italic mb-6">"BrandyDocs didn't just organize our prompts; it saved us from ourselves. We cut down our content review time by 70% because everything is right the first time."</p>
                         <div>
                             <p class="font-bold text-white">Helena Shaw</p>
                             <p class="text-sm gradient-text">Founder, Apex Branding Co.</p>
                         </div>
                     </div>
-                    <div class="bg-dark-700/50 border-l-4 border-gold-500 p-8 rounded-lg">
+                    <div class="bg-dark-700/50 border-l-4 border-gold-500 p-8 rounded-lg" data-aos="fade-left" data-aos-delay="400">
                         <p class="text-xl text-gray-300 italic mb-6">"Onboarding a new writer used to take a week of shadowing. Now, we just give them access to BrandyDocs. They're producing on-brand content on day one. It's our competitive edge."</p>
                         <div>
                             <p class="font-bold text-white">Marcus Thorne</p>
@@ -180,12 +183,12 @@
         <!-- CTA Section -->
         <section id="cta" class="py-20 md:py-32 bg-dark-800">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">Reputation is on the line.</h2>
-                <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">While you're wrestling with spreadsheets, other agencies are building unbreakable brands. Don't let your legacy be defined by a series of small, avoidable mistakes.</p>
-                <a href="https://calendly.com/brandydocs" target="_blank" rel="noopener" class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-4 px-10 text-lg rounded-full inline-block hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6" data-aos="fade-up">Reputation is on the line.</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">While you're wrestling with spreadsheets, other agencies are building unbreakable brands. Don't let your legacy be defined by a series of small, avoidable mistakes.</p>
+                <a href="https://calendly.com/brandydocs" target="_blank" rel="noopener" class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-4 px-10 text-lg rounded-full inline-block hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="400">
                     Book a Demo & Secure Your Brand
                 </a>
-                <p class="text-gray-500 mt-4 text-sm">Be among the first to gain control.</p>
+                <p class="text-gray-500 mt-4 text-sm" data-aos="fade-up" data-aos-delay="600">Be among the first to gain control.</p>
             </div>
         </section>
     </main>
@@ -197,6 +200,17 @@
         </div>
     </footer>
 
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+    
     <script type="module" src="/src/main.js"></script>
 </body>
 </html>
