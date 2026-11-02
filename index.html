@@ -25,7 +25,7 @@
     <!-- Header -->
     <header :class="{ 'bg-black/80 backdrop-blur-sm shadow-lg': scrolled }" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-3xl font-display font-bold gradient-text">BrandyDocs</h1>
+            <div class="text-3xl font-display font-bold gradient-text">BrandyDocs</div>
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="#problem" class="nav-link text-gray-300 hover:text-white relative transition-colors duration-300">The Problem</a>
                 <a href="#solution" class="nav-link text-gray-300 hover:text-white relative transition-colors duration-300">The Solution</a>
@@ -33,7 +33,7 @@
                 <a href="https://calendly.com/brandydocs/demo" target="_blank" rel="noopener" class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-2 px-6 rounded-full hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">Book a Demo</a>
             </nav>
             <div x-data="{ open: false }" class="md:hidden">
-                <button @click="open = !open" class="text-white focus:outline-none">
+                <button @click="open = !open" aria-label="Menu" :aria-expanded="open.toString()" class="text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-400">
                     <i class="fas fa-bars text-xl" x-show="!open"></i>
                     <i class="fas fa-times text-xl" x-show="open" x-cloak></i>
                 </button>
@@ -60,7 +60,6 @@
                 </p>
                 <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 animate-fade-in">
                     That's how you protect your client's brand... and <em>your</em> brand. Well done.
-                </p>
                 </p>
                 <a href="https://calendly.com/brandydocs/demo" target="_blank" rel="noopener" class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-4 px-10 text-lg rounded-full inline-block hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in">
                     Keep that content on-brand. Book a Demo &rarr;
@@ -188,14 +187,14 @@
                 <a href="https://calendly.com/brandydocs/demo" target="_blank" rel="noopener" class="bg-gradient-to-r from-gold-400 to-gold-500 text-black font-bold py-4 px-10 text-lg rounded-full inline-block hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="400">
                     Book a Demo & Secure Your Brand
                 </a>
-                <p class="text-gray-500 mt-4 text-sm" data-aos="fade-up" data-aos-delay="600">Be among the first to gain control.</p>
+                <p class="text-gray-400 mt-4 text-sm" data-aos="fade-up" data-aos-delay="600">Be among the first to gain control.</p>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="bg-black py-8">
-        <div class="container mx-auto px-6 text-center text-gray-500">
+        <div class="container mx-auto px-6 text-center text-gray-400">
             <p>&copy; 2025 BrandyDocs. All Rights Reserved. For the discerning agency.</p>
             <p class="mt-2"><a href="https://github.com/truefrontier/brandydocs.com" target="_blank" rel="noopener" class="text-gray-300 hover:text-white transition-colors duration-300">Source on GitHub</a></p>
         </div>
